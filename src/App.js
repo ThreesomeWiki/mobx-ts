@@ -12,7 +12,7 @@ class App extends React.Component {
         <header
           className="App-header"
           onClick={() => {
-            dataStore.setName();
+            // dataStore.setName();
           }}
         >
           <span>{dataStore.name}</span>
