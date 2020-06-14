@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { observer, inject } from "mobx-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+@inject("dataStore")
+@observer
+class App extends React.Component {
+  render() {
+    const { dataStore = {} } = this.props;
+    return (
+      <div className="App">
+        <header
+          className="App-header"
+          onClick={() => {
+            dataStore.setName();
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <span>{dataStore.name}</span>
+          <span>{dataStore.list.toString()}</span>
+        </header>
+      </div>
+    );
+  }
 }
-
 export default App;
