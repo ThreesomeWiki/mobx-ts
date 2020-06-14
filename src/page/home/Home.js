@@ -2,7 +2,14 @@ import React from "react";
 
 export default class Home extends React.Component {
   render() {
-    console.log("home");
-    return <div>home</div>;
+    return (
+      <div
+        onClick={() => {
+          this.props.history.goBack();
+        }}
+      >
+        home
+      </div>
+    );
   }
 }

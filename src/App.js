@@ -12,7 +12,8 @@ class App extends React.Component {
         <header
           className="App-header"
           onClick={() => {
-            // dataStore.setName();
+            dataStore.setName();
+            this.props.history.push({ pathname: "/home" });
           }}
         >
           <span>{dataStore.name}</span>
