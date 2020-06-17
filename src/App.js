@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { observer, inject } from "mobx-react";
 import { Link } from "react-router-dom";
 
