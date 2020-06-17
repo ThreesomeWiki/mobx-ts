@@ -1,6 +1,19 @@
-body {
-  color: red;
-  span {
-    color: green;
-  }
+html,
+body,
+#root {
+  @extend .flex-column;
+  height: 100%;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  height: 100%;
+  @extend .flex-column;
 }

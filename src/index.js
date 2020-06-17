@@ -6,7 +6,6 @@ import store from "./store";
 import Route from "./Route";
 import "weui";
 import "./index.scss";
-
 ReactDOM.render(
   <Provider {...store}>
     <Route />
