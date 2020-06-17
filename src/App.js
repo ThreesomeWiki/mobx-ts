@@ -1,6 +1,7 @@
 import React from "react";
 import { observer, inject } from "mobx-react";
 import { Link } from "react-router-dom";
+import { Button } from "react-weui";
 
 @inject("dataStore")
 @observer
@@ -19,6 +20,7 @@ class App extends React.Component {
           <span>{dataStore.name}</span>
           <span>{dataStore.list.toString()}</span>
           <Link to="/home">跳转</Link>
+          <Button>微信UI</Button>
         </header>
       </div>
     );

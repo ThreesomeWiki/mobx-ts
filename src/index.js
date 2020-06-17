@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "mobx-react";
 import store from "./store";
 import Route from "./Route";
+import "weui";
+import "./index.scss";
 
 ReactDOM.render(
   <Provider {...store}>
