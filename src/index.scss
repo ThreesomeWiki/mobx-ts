@@ -1,9 +1,13 @@
+html {
+  font-size: 100px;
+  max-width: 500px;
+  margin: 0 auto;
+}
 html,
 body,
 #root {
   @extend .flex-column;
   height: 100%;
-  font-size: 100px;
 }
 .flex-row {
   display: flex;
