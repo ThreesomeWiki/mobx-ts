@@ -14,7 +14,7 @@ body {
 }
 
 .flex-row {
-  display: flex !important;
+  display: flex;
   flex-direction: row;
 }
 .flex-row-between-center {
@@ -22,7 +22,7 @@ body {
 }
 
 .flex-column {
-  display: flex !important;
+  display: flex;
   flex-direction: column;
 }
 

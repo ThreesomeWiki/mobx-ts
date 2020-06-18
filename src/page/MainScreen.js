@@ -1,12 +1,10 @@
 import React from "react";
-import { observer, inject } from "mobx-react";
 import { Tab, TabBarItem } from "react-weui";
 import Icon from "../components/iconfont";
 import Home from "./home/Home";
+import "./global.scss";
 
-@inject("dataStore")
-@observer
-class MainScreen extends React.Component {
+export default class MainScreen extends React.Component {
   state = { tab: 0 };
 
   tabs = [
@@ -18,7 +16,6 @@ class MainScreen extends React.Component {
   ];
 
   render() {
-    const { dataStore = {} } = this.props;
     const { tab } = this.state;
     return (
       <Tab
@@ -29,7 +26,6 @@ class MainScreen extends React.Component {
       >
         {this.tabs.map((Item, index) => (
           <TabBarItem
-            className="App"
             key={Item.label}
             icon={
               <Icon
@@ -41,10 +37,10 @@ class MainScreen extends React.Component {
             label={Item.label}
           >
             <Item.Component />
+            <div style={{ height: "0.5rem" }} />
           </TabBarItem>
         ))}
       </Tab>
     );
   }
 }
-export default MainScreen;

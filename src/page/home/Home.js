@@ -1,7 +1,22 @@
 import React from "react";
+import { observer, inject } from "mobx-react";
 import "./Home.scss";
-export default class Home extends React.Component {
+@inject("dataStore")
+@observer
+class Home extends React.Component {
   render() {
-    return <div className="Home">home</div>;
+    const { dataStore = {} } = this.props;
+    return (
+      <div className="Home">
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+        <div>home</div>
+      </div>
+    );
   }
 }
+
+export default Home;
