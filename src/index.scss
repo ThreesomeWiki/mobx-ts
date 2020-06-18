@@ -1,24 +1,31 @@
-html {
-  font-size: 100px;
-  max-width: 500px;
-  margin: 0 auto;
-}
 html,
 body,
 #root {
   @extend .flex-column;
   height: 100%;
 }
+html {
+  font-size: 100px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+body {
+  font-size: 0.16rem;
+}
+
 .flex-row {
-  display: flex;
+  display: flex !important;
   flex-direction: row;
 }
+.flex-row-between-center {
+  @extend .flex-row;
+}
+
 .flex-column {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 
-.App {
+.weui-tab__bd-item {
   height: 100%;
-  @extend .flex-column;
 }
