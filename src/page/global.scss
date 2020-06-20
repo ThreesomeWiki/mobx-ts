@@ -8,9 +8,17 @@ html {
   font-size: 100px;
   max-width: 500px;
   margin: 0 auto;
+  overflow: -moz-hidden-unscrollable;
 }
 body {
+  -ms-overflow-style: none;
   font-size: 0.16rem;
+}
+div {
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .flex-row {
@@ -19,6 +27,13 @@ body {
 }
 .flex-row-between-center {
   @extend .flex-row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-row-start-center {
+  @extend .flex-row;
+  align-items: center;
 }
 
 .flex-column {
