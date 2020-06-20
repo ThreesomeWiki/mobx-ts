@@ -1,5 +1,11 @@
 .Home {
-  flex: 1;
   min-height: 100%;
-  background-color: pink;
+  flex: 1;
+  .carousel {
+    height: 2rem;
+    div {
+      height: 100%;
+      background-color: red;
+    }
+  }
 }
